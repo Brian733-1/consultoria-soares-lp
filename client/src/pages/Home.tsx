@@ -63,12 +63,12 @@ export default function Home() {
               <img
                 src="/soares-logo.png"
                 alt="Soares Logo"
-                className="h-11 w-11 sm:h-14 sm:w-14 rounded-full object-cover ring-2 ring-[#E0A83B] shadow-sm"
+                className="h-11 w-11 sm:h-14 sm:w-14 rounded-full object-cover shadow-sm"
               />
               <div>
                 <h1 className="text-base sm:text-xl font-bold text-[#16294D] leading-tight">Soares</h1>
                 <p className="text-[11px] sm:text-xs text-[#586074] font-medium">
-                  🚗 Despachante Credenciado
+                  Despachante Credenciado 🚗
                 </p>
               </div>
             </div>
@@ -455,7 +455,7 @@ export default function Home() {
                 <img
                   src="/soares-logo.png"
                   alt="Soares Logo"
-                  className="h-10 w-10 rounded-full object-cover ring-2 ring-[#E0A83B]/60"
+                  className="h-10 w-10 rounded-full object-cover"
                 />
                 <span className="font-bold text-white text-lg">Soares</span>
               </div>
