@@ -3,6 +3,14 @@ import { Card } from "@/components/ui/card";
 import { MapPin, Phone, Clock, CheckCircle, Shield, Zap, Users, FileText, Car } from "lucide-react";
 import { useEffect, useState } from "react";
 
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 448 512" aria-hidden="true">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+    </svg>
+  );
+}
+
 const BUSINESS = {
   name: "Soares Despachante e Proteção Veicular",
   whatsapp: "5511987496688",
@@ -45,18 +53,23 @@ export default function Home() {
             : "bg-white border-b border-gray-100"
         }`}
       >
+        {/* Color accent bar */}
+        <div className="h-1 bg-gradient-to-r from-[#16294D] via-[#E0A83B] to-[#16294D]" />
+
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2.5 sm:gap-3">
               <img
                 src="/soares-logo.png"
                 alt="Soares Logo"
-                className="h-11 w-11 sm:h-14 sm:w-14"
+                className="h-11 w-11 sm:h-14 sm:w-14 rounded-full object-cover ring-2 ring-[#E0A83B] shadow-sm"
               />
-              <div className="hidden sm:block">
-                <h1 className="text-lg sm:text-xl font-bold text-[#16294D] leading-tight">Soares</h1>
-                <p className="text-xs text-[#586074] font-medium">Despachante Credenciado</p>
+              <div>
+                <h1 className="text-base sm:text-xl font-bold text-[#16294D] leading-tight">Soares</h1>
+                <p className="text-[11px] sm:text-xs text-[#586074] font-medium">
+                  🚗 Despachante Credenciado
+                </p>
               </div>
             </div>
 
@@ -76,9 +89,7 @@ export default function Home() {
                 size="sm"
                 className="bg-green-500 hover:bg-green-600 text-white font-semibold"
               >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3a8.3 8.3 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.3 8.3 0 1 1 12 20.3Z" />
-                </svg>
+                <WhatsAppIcon className="w-4 h-4" />
                 <span className="hidden sm:inline">WhatsApp</span>
               </Button>
             </div>
@@ -121,9 +132,7 @@ export default function Home() {
                   size="lg"
                   className="bg-green-500 hover:bg-green-600 text-white font-bold text-base py-6 px-8 rounded-lg"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3a8.3 8.3 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.3 8.3 0 1 1 12 20.3Z" />
-                  </svg>
+                  <WhatsAppIcon className="w-5 h-5" />
                   Pedir orçamento no WhatsApp
                 </Button>
                 <Button
@@ -374,9 +383,7 @@ export default function Home() {
                     size="lg"
                     className="w-full bg-green-500 hover:bg-green-600 text-white font-bold text-base py-6 rounded-lg"
                   >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3a8.3 8.3 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.3 8.3 0 1 1 12 20.3Z" />
-                    </svg>
+                    <WhatsAppIcon className="w-5 h-5" />
                     Enviar mensagem no WhatsApp
                   </Button>
                 </div>
@@ -423,9 +430,7 @@ export default function Home() {
               size="lg"
               className="bg-green-500 hover:bg-green-600 text-white font-bold text-base py-6 px-8 rounded-lg"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3a8.3 8.3 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.3 8.3 0 1 1 12 20.3Z" />
-              </svg>
+              <WhatsAppIcon className="w-5 h-5" />
               Conversar no WhatsApp
             </Button>
             <Button
@@ -450,7 +455,7 @@ export default function Home() {
                 <img
                   src="/soares-logo.png"
                   alt="Soares Logo"
-                  className="h-10 w-10"
+                  className="h-10 w-10 rounded-full object-cover ring-2 ring-[#E0A83B]/60"
                 />
                 <span className="font-bold text-white text-lg">Soares</span>
               </div>
@@ -497,9 +502,7 @@ export default function Home() {
         className="fixed bottom-6 right-6 z-40 md:hidden bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse"
         aria-label="WhatsApp"
       >
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.3a8.3 8.3 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.3 8.3 0 1 1 12 20.3Z" />
-        </svg>
+        <WhatsAppIcon className="w-6 h-6" />
       </button>
     </div>
   );
