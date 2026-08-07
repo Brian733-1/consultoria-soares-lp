@@ -50,7 +50,7 @@ export default function Home() {
             {/* Logo */}
             <div className="flex items-center gap-3">
               <img
-                src="/manus-storage/soares-logo_fdfb37b1.png"
+                src="/soares-logo.png"
                 alt="Soares Logo"
                 className="h-11 w-11 sm:h-14 sm:w-14"
               />
@@ -448,7 +448,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img
-                  src="/manus-storage/soares-logo_fdfb37b1.png"
+                  src="/soares-logo.png"
                   alt="Soares Logo"
                   className="h-10 w-10"
                 />
